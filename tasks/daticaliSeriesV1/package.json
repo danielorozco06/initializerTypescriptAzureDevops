@@ -1,0 +1,27 @@
+{
+  "name": "daticaliseries",
+  "version": "1.0.0",
+  "description": "Datical Analyze for SQL tasks for AS400 using UCD",
+  "main": "index.js",
+  "jest": {
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "json",
+      "text",
+      "clover",
+      "cobertura",
+      "html"
+    ],
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "test": "jest --config jest.config.js"
+  },
+  "author": "DevOps Team",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.8.0"
+  }
+}

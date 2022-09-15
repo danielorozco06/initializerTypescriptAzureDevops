@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "../../dist/tasks/daticaliSeriesV1",
+    "rootDir": "./src",
+    "strict": false,
+    "sourceMap": true
+  },
+  "exclude": [
+    "**/*.data.ts",
+    "node_modules",
+    "**/*.spec.ts",
+    "__tests__",
+    "coverage",
+    "dist"
+  ]
+}

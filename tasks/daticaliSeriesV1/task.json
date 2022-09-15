@@ -1,0 +1,63 @@
+{
+  "id": "0881f66a-32fe-4adc-bdd6-1fc97b823027",
+  "name": "daticaliSeries",
+  "icons": {
+    "default": "icon.png"
+  },
+  "friendlyName": "Datical Analyze SQL iSeries",
+  "description": "Datical Analyze for SQL tasks for AS400 using UCD",
+  "helpMarkDown": "#{Build.BuildNumber}#",
+  "category": "Build",
+  "visibility": [
+    "Build"
+  ],
+  "runsOn": [
+    "Agent",
+    "MachineGroup"
+  ],
+  "demands": [],
+  "author": "DevOps Team",
+  "version": {
+    "Major": 1,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "minimumAgentVersion": "1.83.0",
+  "instanceNameFormat": "Datical Analyze SQL iSeries",
+  "inputs": [
+    {
+      "name": "application",
+      "type": "string",
+      "label": "Application",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Siglas de la aplicacion"
+    },
+    {
+      "name": "projectArea",
+      "type": "pickList",
+      "label": "ProjectArea",
+      "defaultValue": "Bancolombia",
+      "required": true,
+      "helpMarkDown": "Grupo - organizacion de la aplicacion ",
+      "options": {
+        "Bancolombia": "Bancolombia",
+        "Leasing": "Leasing",
+        "SUFI": "SUFI"
+      }
+    },
+    {
+      "name": "FullOpen",
+      "type": "boolean",
+      "label": "Break With Rule Full Open",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Para romper en caso de encontrar reglas de FullOpenClosed"
+    }
+  ],
+  "execution": {
+    "Node10": {
+      "target": "index.js"
+    }
+  }
+}

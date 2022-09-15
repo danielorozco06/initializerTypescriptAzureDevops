@@ -1,0 +1,26 @@
+{
+  //VScode configurations
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": true,
+  // Git configurations
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  "gitlens.views.repositories.autoRefresh": true,
+  //Plugin reWrap configuration
+  "rewrap.autoWrap.enabled": true,
+  "editor.rulers": [90],
+  // Set formatters using trunk plugin
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

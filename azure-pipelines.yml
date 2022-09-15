@@ -1,0 +1,35 @@
+name: $(Build.SourceBranchName).$(date:yyyyMMdd)$(rev:.r)
+
+variables:
+  - group: azure devops - extension - production
+  - name: Extension.Version
+    value: "1.0.0"
+  - name: Extension.Id
+    value: "Datical-iSeries"
+  - name: Extension.Name
+    value: "Datical-iSeries"
+  - name: Artifactory.Repository
+    value: "build-AW1192003_DevOps_Extension/$(Extension.Id)"
+
+trigger:
+  branches:
+    include:
+      - trunk
+      - feature/*
+
+resources:
+  - repo: self
+    clean: all
+    fetchDepth: 1
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+  - template: pipelines/build.yml
+
+  - ${{ if  eq(variables['Build.SourceBranch'], 'refs/heads/trunk') }}:
+      - template: pipelines/deploy.yml
+
+  - ? ${{ if  startsWith(variables['Build.SourceBranch'], 'refs/heads/feature/') }}
+    : - template: pipelines/deploy.yml

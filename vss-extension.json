@@ -1,0 +1,47 @@
+{
+  "manifestVersion": 1,
+  "id": "Get-Data-RTC",
+  "name": "Get-Data-RTC",
+  "version": "1.1.0",
+  "description": "Get data of RTC, like change sets, files, WorkItems, etc. #{Build.BuildNumber}#",
+  "publisher": "DevOps Team",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "tags": [
+    "BuildNumber"
+  ],
+  "scopes": [
+    "vso.build"
+  ],
+  "icons": {
+    "default": "static/logo.png"
+  },
+  "content": {
+    "details": {
+      "path": "static/overview.md"
+    }
+  },
+  "contributions": [
+    {
+      "id": "daticaliSeries",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "dist/tasks"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "dist/tasks"
+    }
+  ]
+}
