@@ -11,6 +11,7 @@
     "buildByTask": "node scripts/build.js",
     "test": "jest --clearCache &&  jest --coverage",
     "coverage": "open-cli coverage/index.html",
+    "coveragedaticaliSeriesV1": "open-cli tasks/daticaliSeriesV1/coverage/index.html",
     "installOnlyProductionDependenciesByTask": "node scripts/package.js"
   },
   "jest": {
