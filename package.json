@@ -25,6 +25,9 @@
     ],
     "testResultsProcessor": "jest-sonar-reporter"
   },
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.8.0"
+  },
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
