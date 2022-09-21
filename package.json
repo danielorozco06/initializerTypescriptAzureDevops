@@ -10,9 +10,10 @@
     "installDependenciesByTask": "node scripts/install.js",
     "buildByTask": "node scripts/build.js",
     "test": "jest --clearCache &&  jest --coverage",
-    "coverage": "open-cli coverage/index.html",
-    "coveragedaticaliSeriesV1": "open-cli tasks/daticaliSeriesV1/coverage/index.html",
-    "installOnlyProductionDependenciesByTask": "node scripts/package.js"
+    "installOnlyProductionDependenciesByTask": "node scripts/package.js",
+    "build:DaticaliSeriesV1": "cd tasks/daticaliSeriesV1 && tsc -w",
+    "test:DaticaliSeriesV1": "jest --coverage --watchAll --testPathPattern=tasks/daticaliSeriesV1/__tests__",
+    "coverage": "open-cli coverage/index.html"
   },
   "jest": {
     "coverageReporters": [
