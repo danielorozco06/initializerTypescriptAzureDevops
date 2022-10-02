@@ -12,7 +12,7 @@
   "gitlens.views.repositories.autoRefresh": true,
   //Plugin reWrap configuration
   "rewrap.autoWrap.enabled": true,
-  "editor.rulers": [90],
+  "editor.rulers": [100],
   // Set formatters using trunk plugin
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
