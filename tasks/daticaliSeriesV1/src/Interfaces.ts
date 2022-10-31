@@ -1,7 +1,9 @@
 export interface IdataVSTS {
   SOURCE_BRANCH_NAME: string;
+  SOURCEBRANCH: string;
   systemDefaultWorkingDirectory: string;
-  DATARTC: IdataRTC;
+  BUILD_BUILDID: string;
+  REPOSITORY_ID: string;
 }
 
 export interface IdataRTC {

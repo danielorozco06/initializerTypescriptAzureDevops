@@ -22,6 +22,8 @@
   "author": "DevOps Team",
   "license": "ISC",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.8.0"
+    "azure-devops-node-api": "^11.2.0",
+    "azure-pipelines-task-lib": "^2.8.0",
+    "azure-devops-task-utils": "4.0.1"
   }
 }
