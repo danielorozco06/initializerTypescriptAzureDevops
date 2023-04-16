@@ -3,17 +3,14 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "initialize": "npm cache clean --force && npm run cleanPaths && npm run cleanFiles && npm run installDependenciesInProject && npm run installDependenciesByTask && npm run buildByTask && npm run test && npm run coverage",
+    "initialize": "npm cache clean --force && npm run cleanPaths && npm run cleanFiles && npm run installDependenciesInProject && npm run installDependenciesByTask && npm run buildByTask && npm run test",
     "cleanPaths": "rm -rf $(find . -type d \\( -name node_modules -prune -o -name coverage -prune -o -name dist -prune \\))",
     "cleanFiles": "rm -f $(find . -type f \\( -name package-lock.json -prune -o -name .taskkey -prune \\))",
-    "installDependenciesInProject": "npm i -q --registry=https://artifactory.apps.bancolombia.com/api/npm/npm-bancolombia/",
+    "installDependenciesInProject": "npm i -q",
     "installDependenciesByTask": "node scripts/install.js",
     "buildByTask": "node scripts/build.js",
-    "test": "jest --clearCache &&  jest --coverage",
-    "coverage": "open-cli coverage/index.html",
-    "installOnlyProductionDependenciesByTask": "node scripts/package.js",
-    "build:DaticaliSeriesV1": "cd tasks/daticaliSeriesV1 && tsc -w",
-    "test:DaticaliSeriesV1": "jest --coverage --watchAll --testPathPattern=tasks/daticaliSeriesV1/__tests__"
+    "test": "jest --clearCache &&  jest --coverage --silent=true",
+    "installOnlyProductionDependenciesByTask": "node scripts/package.js"
   },
   "jest": {
     "coverageReporters": [
@@ -31,17 +28,10 @@
     "azure-pipelines-task-lib": "^2.8.0"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.3",
-    "@types/node": "^14.0.5",
-    "@types/node-fetch": "^2.5.7",
-    "@types/q": "^1.5.4",
-    "@types/prettier": "2.4.4",
     "jest": "^26.6.3",
-    "ts-jest": "^26.4.4",
     "jest-sonar": "^0.2.11",
-    "ts-node": "^8.10.1",
-    "open-cli": "^7.0.1",
-    "typescript": "^4.7.4",
-    "rimraf": "^2.6.2"
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.6.4",
+    "rimraf": "^5.0.0"
   }
 }
