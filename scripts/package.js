@@ -53,14 +53,7 @@ function cleanMap(taskDir) {
  * @param cwd - (String) - Current working directory.
  */
 function execNpm(command, cwd) {
-  exec(
-    'npm ' +
-      command +
-      ' -q' +
-      ' --only=production' +
-      ' --registry=https://artifactory.apps.bancolombia.com/api/npm/npm-bancolombia/',
-    { cwd: cwd, stdio: [0, 1, 2] }
-  );
+  exec('npm ' + command + ' -q' + ' --only=production', { cwd: cwd, stdio: [0, 1, 2] });
 }
 
 /**
